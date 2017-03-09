@@ -20,7 +20,7 @@
 	<h1>Hello, world.</h1>
 
     
-    <table class="table table-hover">
+    <table class="table">
         <thead>
             <tr>
                 <th>Stage (of activity)</th>
@@ -32,32 +32,44 @@
         </thead>
         <tbody>
             <tr>
-                <td>Characteristics</td>
+                <td class="heading heading-parent">Characteristics</td>
             </tr>
             <tr>
-                <td>Ubiquity</td>
-                <td>Rare</td>
-                <td>Slowly increasing consumption</td>
-                <td>Rapidly increasing consumption</td>
-                <td>Widespread and stabilising</td>
+                <td class="heading">Ubiquity</td>
+                <td class="selectable">Rare</td>
+                <td class="selectable">Slowly increasing consumption</td>
+                <td class="selectable">Rapidly increasing consumption</td>
+                <td class="selectable">Widespread and stabilising</td>
             </tr>
             <tr>
-                <td>Certainty</td>
-                <td>Poorly understood</td>
-                <td>Rapid increases in learning</td>
-                <td>Rapid increases in use / fit for purpose</td>
-                <td>Commonly understood (in terms of use)</td>
+                <td class="heading">Certainty</td>
+                <td class="selectable">Poorly understood</td>
+                <td class="selectable">Rapid increases in learning</td>
+                <td class="selectable">Rapid increases in use / fit for purpose</td>
+                <td class="selectable">Commonly understood (in terms of use)</td>
             </tr>
             <tr>
-                <td>Publication Types</td>
-                <td>Normally describe the wonder of the thing</td>
-                <td>Build / construct / awareness and learning</td>
-                <td>Maintenance / operations / installation / features</td>
-                <td>Focused on use</td>
+                <td class="heading">Publication Types</td>
+                <td class="selectable">Normally describe the wonder of the thing</td>
+                <td class="selectable">Build / construct / awareness and learning</td>
+                <td class="selectable">Maintenance / operations / installation / features</td>
+                <td class="selectable">Focused on use</td>
             </tr>
         </tbody>
     </table>
     
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function(){
+            $(".selectable").on("click", function(e) {     
+            $(this)
+                .toggleClass("info")
+            });
+        };
+    </script>
 </body>
 </html>

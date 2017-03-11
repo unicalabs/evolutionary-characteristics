@@ -36,24 +36,24 @@
             </tr>
             <tr>
                 <td class="heading">Ubiquity</td>
-                <td class="selectable">Rare</td>
-                <td class="selectable">Slowly increasing consumption</td>
-                <td class="selectable">Rapidly increasing consumption</td>
-                <td class="selectable">Widespread and stabilising</td>
+                <td>Rare</td>
+                <td>Slowly increasing consumption</td>
+                <td>Rapidly increasing consumption</td>
+                <td>Widespread and stabilising</td>
             </tr>
             <tr>
                 <td class="heading">Certainty</td>
-                <td class="selectable">Poorly understood</td>
-                <td class="selectable">Rapid increases in learning</td>
-                <td class="selectable">Rapid increases in use / fit for purpose</td>
-                <td class="selectable">Commonly understood (in terms of use)</td>
+                <td>Poorly understood</td>
+                <td>Rapid increases in learning</td>
+                <td>Rapid increases in use / fit for purpose</td>
+                <td>Commonly understood (in terms of use)</td>
             </tr>
             <tr>
                 <td class="heading">Publication Types</td>
-                <td class="selectable">Normally describe the wonder of the thing</td>
-                <td class="selectable">Build / construct / awareness and learning</td>
-                <td class="selectable">Maintenance / operations / installation / features</td>
-                <td class="selectable">Focused on use</td>
+                <td>Normally describe the wonder of the thing</td>
+                <td>Build / construct / awareness and learning</td>
+                <td>Maintenance / operations / installation / features</td>
+                <td>Focused on use</td>
             </tr>
         </tbody>
     </table>
@@ -66,9 +66,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
         window.onload = function(){
-            $(".selectable").on("click", function(e) {     
-            $(this)
-                .toggleClass("info")
+            $("tbody td").on("click", function(e) {
+                if (!$(this).hasClass("heading")) {
+                    $(this).toggleClass("info")
+                }
             });
         };
     </script>

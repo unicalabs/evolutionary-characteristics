@@ -1,13 +1,13 @@
+tbody td:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
 tbody td.heading {
     background-color: #f5f5f5;
-    cursor: auto;
+    cursor: default;
 }
 
 tbody td.heading-parent {
     font-weight: bold;
-}
-
-tbody td.selectable:hover {
-    background-color: #f5f5f5;
-    cursor: pointer;
 }

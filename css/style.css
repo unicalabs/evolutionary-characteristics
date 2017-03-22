@@ -1,4 +1,4 @@
-tbody td:hover {
+.table-markable tbody td:hover {
     cursor: pointer;
 }
 

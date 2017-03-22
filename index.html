@@ -35,22 +35,22 @@
                     </a>
                 </h4>
                 </div>
-                <div id="collapseIntroductionEvolution" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingIntroductionEvolution">
+                <div id="collapseIntroductionEvolution" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingIntroductionEvolution">
                 <div class="panel-body">
                     <p class="lead">All components <strong>evolve from left to right</strong> under the influence of supply and demand competition.</p>
-                    <table class="table table-hover table-responsive">
+                    <table class="table table-responsive">
                         <thead>
                             <tr>
-                                <th>Stage (of activity)</th>
-                                <th>I</th>
-                                <th>II</th>
-                                <th>III</th>
-                                <th>IV</th>
+                                <th>Stage of Evolution</th>
+                                <th><h3>I</h3></th>
+                                <th><h3>II</h3></th>
+                                <th><h3>III</h3></th>
+                                <th><h3>IV</h3></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="heading heading-parent">Component Type</td>
+                                <td class="heading heading-parent"></td>
                                 <td colspan="4">
                                     <svg class="svg-hidden">
                                         <defs>
@@ -64,32 +64,27 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="heading">Activities</td>
-                                <td class="bg-danger">Genesis</td>
-                                <td class="bg-warning">Custom</td>
-                                <td class="bg-success">Product (+rental)</td>
-                                <td class="bg-info">Commodity (+utility)</td>
-                            </tr>
-                            <tr>
-                                <td class="heading">Practice</td>
-                                <td class="bg-danger">Novel</td>
-                                <td class="bg-warning">Emerging</td>
-                                <td class="bg-success">Good</td>
-                                <td class="bg-info">Best</td>
-                            </tr>
-                            <tr>
-                                <td class="heading">Data</td>
-                                <td class="bg-danger">Unmodeled</td>
-                                <td class="bg-warning">Divergent</td>
-                                <td class="bg-success">Convergent</td>
-                                <td class="bg-info">Modeled</td>
-                            </tr>
-                            <tr>
-                                <td class="heading">Knowledge</td>
-                                <td class="bg-danger">Concept</td>
-                                <td class="bg-warning">Hypothesis</td>
-                                <td class="bg-success">Theory</td>
-                                <td class="bg-info">Accepted</td>
+                                <td class="heading"></td>
+                                <td class="bg-danger">
+                                    <h3>Genesis</h3>
+                                    <p>Unique, rare, uncertain, constantly changing, newly-discovered.</p>
+                                    <p>The focus is on <strong>exploring</strong>.</p>
+                                </td>
+                                <td class="bg-warning">
+                                    <h3>Custom</h3>
+                                    <p>Very uncommon. Tailor-made for a specific environment. Frequently changes. Requires artisanal skill. No two are the same.</p>
+                                    <p>The focus is on <strong>learning</strong> and <strong>developing the craft</strong></p>
+                                </td>
+                                <td class="bg-success">
+                                    <h3>Product (and rental)</h3>
+                                    <p>Increasingly common, more defined, better understood. Repeatable manufacturing process. Change is slower. Initial differentiation but increasing stability and sameness. Often many of the same product. Improvement.</p>
+                                    <p>The focus is on <strong>refining</strong> and <strong>improving</strong>.</p>
+                                </td>
+                                <td class="bg-info">
+                                    <h3>Commodity (and utility)</h3>
+                                    <p>Scale and volume operations of production. Highly standardised. Defined. Fixed. Undifferentiated. Fit for a specific known purpose. Repetition, repetition, repetition... With time, it becomes commonplace and more invisible.</p>
+                                    <p>The focus is on <strong>ruthlessly removing deviation</strong>, <strong>industrialising</strong>, and <strong>increasing operational efficiently</strong>.
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -121,7 +116,7 @@
                 <div id="collapseAdvanced" class="panel-collapse collapse" role="tabpanel" aria-labelledby="advancedHeading">
                     <div class="panel-body">
                         <p class="lead">Select cells to highlight them as you think, discuss, and challenge assumptions.</p>
-                        <table class="table table-hover">
+                        <table class="table table-hover table-responsive table-markable">
                             <thead>
                                 <tr>
                                     <th>Stage (of activity)</th>
@@ -260,7 +255,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
         window.onload = function(){
-            $("tbody td").on("click", function(e) {
+            $(".table-markable tbody td").on("click", function(e) {
                 if (!$(this).hasClass("heading")) {
                     $(this).toggleClass("info")
                 }
